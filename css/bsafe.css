@@ -9,7 +9,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #18BC9C;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -41,6 +41,22 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
-.top-menu {
-    align-content: center;
+
+/* .parameters {
+    border: 1px solid black;
+    height: 300px;
+    width: 210px;
+    margin: 20px;
+} */
+
+.state-icon {
+    left: -5px;
+}
+.list-group-item-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+}
+
+.well .list-group {
+    margin-bottom: 0px;
 }
