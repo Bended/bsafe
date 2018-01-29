@@ -1,5 +1,14 @@
 body {
     font-family: "Lato", sans-serif;
+    margin: 0px;
+    color: #60b0f4;
+}
+
+#tab{
+    color: #60b0f4;
+    position: fixed;
+    top: 20px;
+    left: 30px;
 }
 
 .sidenav {
@@ -9,10 +18,10 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #18BC9C;
+    background-color: #60b0f4;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 0px;
 }
 
 .sidenav a {
@@ -41,14 +50,6 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
-
-/* .parameters {
-    border: 1px solid black;
-    height: 300px;
-    width: 210px;
-    margin: 20px;
-} */
-
 .state-icon {
     left: -5px;
 }
@@ -59,4 +60,70 @@ body {
 
 .well .list-group {
     margin-bottom: 0px;
+}
+
+#ex1Slider .slider-selection {
+    background: #BABABA;
+    align-content: center;
+}
+
+#usr{
+    margin: 3px 0px;
+    width: 100%
+}
+
+#selector{
+    background: color #00000000;;
+    border: #000000;
+    margin-top: 25px;
+}
+
+#get-checked-data{
+    margin-top: 20px;
+    background-color: #fed136;
+    border: #60b0f4;
+    transition: background-color .15s ease-in-out,border .15s ease-in-out;
+}
+
+#get-checked-data:hover{
+    background-color: #ffffff;
+    color: #fed136;
+    border: #fed136 1px solid;
+}
+
+
+.logo{
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    position: fixed;
+    right: 45%;
+    top: 15px;
+}
+
+#logo_menu{
+    width: 25%;
+    margin-left: 90px;
+}
+
+.top3{
+    position: fixed;
+    display: none;
+    padding: 10px;
+    top: 80px;
+    right: 50px;
+    height: auto;
+    width: 20%;
+}
+
+@media screen and (max-width: 768px){
+    .top3{
+        display: none;
+    }
+}
+
+#autocomplete{
+    width: 211px;
+    border-radius: 2px;
+    margin-bottom: 3px;
 }

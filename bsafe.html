@@ -4,46 +4,68 @@
     <title>BSafe</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/bsafe.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 </head>
 <body>
 
+
+<div class=".container-fluid">
+        <div class="row">
+                <div class="col-md-1">
+                    <span id="tab" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+                </div>
+                <div class="col-md-11">
+                    <img src="./images/Logo2.png" class="logo" alt="top-logo">
+                </div>
+        </div>
+</div>
+
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
+  <a href="#"> </a>
+  <img id="logo_menu" src="./images/logo4.png" alt="">
     <div class="parameters">
-            <div class="well" style="max-height: 300px;overflow: auto;">
-                    <ul id="check-list-box" class="list-group checked-list-box">
-                      <li class="list-group-item" data-color="success">Woman</li>
-                      <li class="list-group-item" data-color="info">Driver</li>
-                      <li class="list-group-item" data-color="warning">Policeman</li>
-                      <li class="list-group-item" data-color="danger">Resident</li>
-                    </ul>
-                    <br />
-                    <button class="btn btn-primary col-xs-12" id="get-checked-data"> See my Safe map </button>
+            <div class="form-group">
+                    
+            </div>
+            <div class="well" id="selector" style="max-height: 400px;overflow: auto">
+                <div id="locationField">
+                        <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
                 </div>
+                <ul id="check-list-box" class="list-group checked-list-box">
+                    <li class="list-group-item" data-color="success">Woman</li>
+                    <li class="list-group-item" data-color="success">Pedestrian</li>
+                    <li class="list-group-item" data-color="danger">Resident</li>
+                    <li class="list-group-item" data-color="info">Driver</li>
+                    <li class="list-group-item" data-color="warning">Policeman</li>
+                </ul>
+                <br />
+                <span id="ex6CurrentSliderValLabel">What time : <span id="ex6SliderVal">3</span>h</span>
+                <input id="ex6" type="text" data-slider-min="0" data-slider-max="24" data-slider-step="0.5" data-slider-value="10"/>
+                <br />
+                <button class="btn btn-primary col-xs-12" id="get-checked-data">See my BSafe map</button>
+            </div>
     </div>
 </div>
 
-<div class=".container-fluid">
-    <div class="row">
-            <div class="col-md-2">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-            </div>
-            <div class="col-md-10">
-                <h2 class="text-center">BSafe</h2>
-            </div>
-        
-    </div>
+<div class="top3">
+        <ul class="list-group">
+            <li class="list-group-item">Car accidents <span class="badge">12</span></li>
+            <li class="list-group-item">Sexual assault <span class="badge">5</span></li> 
+            <li class="list-group-item">Drug <span class="badge">3</span></li> 
+        </ul>
 </div>
+
      
 </body>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.js" type="text/javascript"></script>
 <script src="./js/bsafe.js"></script>
 <script src="./js/bsafe_parameters.js"></script>
-    
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIsECqZT3LgPuP6XQw7P2jSnjU__JkxFw&libraries=places&callback=initAutocomplete"
+    async defer></script>
 </html> 
